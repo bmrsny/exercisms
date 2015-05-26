@@ -1,0 +1,22 @@
+require 'prime'
+
+class Raindrops
+  def self.speak
+    {
+      3 => 'Pling',
+      5 => 'Plang',
+      7 => 'Plong'
+    }
+  end
+
+  def self.convert(num)
+    require "pry" 
+     binding.pry
+    speak.keys do |speak_key|
+      if speak_key % num == 0
+        speak[speak_key]
+      end
+    end
+  end
+
+end
